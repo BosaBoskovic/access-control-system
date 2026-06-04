@@ -1,0 +1,38 @@
+[
+    {
+      "id": "u1",
+      "username": "ana.admin",
+      "password": "admin123",
+      "role": "admin",
+      "department": "IT",
+      "seniority": "lead",
+      "status": "active"
+    },
+    {
+      "id": "u2",
+      "username": "marko.manager",
+      "password": "manager123",
+      "role": "manager",
+      "department": "finance",
+      "seniority": "senior",
+      "status": "active"
+    },
+    {
+      "id": "u3",
+      "username": "jana.user",
+      "password": "user123",
+      "role": "user",
+      "department": "HR",
+      "seniority": "junior",
+      "status": "active"
+    },
+    {
+      "id": "u4",
+      "username": "petar.suspended",
+      "password": "user123",
+      "role": "user",
+      "department": "IT",
+      "seniority": "junior",
+      "status": "suspended"
+    }
+  ]

@@ -1,0 +1,34 @@
+[
+    {
+      "id": "r1",
+      "name": "Finansijski izvještaj Q1",
+      "type": "report",
+      "department": "finance",
+      "confidentiality": "high",
+      "owner": "u2"
+    },
+    {
+      "id": "r2",
+      "name": "HR dokumentacija",
+      "type": "document",
+      "department": "HR",
+      "confidentiality": "medium",
+      "owner": "u3"
+    },
+    {
+      "id": "r3",
+      "name": "IT infrastruktura",
+      "type": "document",
+      "department": "IT",
+      "confidentiality": "medium",
+      "owner": "u1"
+    },
+    {
+      "id": "r4",
+      "name": "Javni pravilnik",
+      "type": "document",
+      "department": "IT",
+      "confidentiality": "low",
+      "owner": "u1"
+    }
+  ]

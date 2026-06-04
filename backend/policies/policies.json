@@ -1,0 +1,66 @@
+[
+    {
+      "id": "POL-S1",
+      "name": "Pristup po ulozi korisnika",
+      "effect": "permit",
+      "priority": 5,
+      "conditions": {
+        "user.role": "manager",
+        "user.status": "active",
+        "resource.confidentiality": "medium"
+      }
+    },
+    {
+      "id": "POL-S2",
+      "name": "Zabrana pristupa van radnog vremena",
+      "effect": "deny",
+      "priority": 20,
+      "conditions": {
+        "context.time_of_day": "off_hours"
+      }
+    },
+    {
+      "id": "POL-S3",
+      "name": "Pristup dokumentima vlastitog odjeljenja",
+      "effect": "permit",
+      "priority": 10,
+      "conditions": {
+        "user.department": "{{resource.department}}",
+        "user.status": "active"
+      }
+    },
+    {
+      "id": "POL-S4",
+      "name": "Povjerljivi podaci - menadžeri u radno vrijeme",
+      "effect": "permit",
+      "priority": 15,
+      "conditions": {
+        "user.role": "manager",
+        "user.department": "{{resource.department}}",
+        "user.status": "active",
+        "resource.confidentiality": "high",
+        "context.time_of_day": "working_hours",
+        "context.day_of_week": "weekday"
+      }
+    },
+    {
+      "id": "POL-S5",
+      "name": "Zabrana pristupa sa eksterne mreže",
+      "effect": "deny",
+      "priority": 25,
+      "conditions": {
+        "context.ip_network": "external",
+        "resource.confidentiality": "high"
+      }
+    }
+    ,{
+      "id": "POL-S6",
+      "name": "Obicni korisnici - samo javni resursi",
+      "effect": "deny",
+      "priority": 30,
+      "conditions": {
+        "user.role": "user",
+        "resource.confidentiality": "medium"
+      }
+    }
+  ]
